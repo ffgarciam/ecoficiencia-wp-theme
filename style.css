@@ -34,8 +34,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   background-image: linear-gradient(to bottom, #ededed 0%, #ededed 100%); /* Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+ */
   background-repeat: repeat-x;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(#ededed),argb(#ededed))); /* IE9 and down */
-  background-size: 45%;
-  background-position-y: 10px;
+  background-size: auto 45%;
+  background-position: 0 10px;
 }
 
 .lastest-updates > h1 > span {
@@ -209,4 +209,34 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 0;
   margin: 0;
   color: #787878;
+}
+
+
+/* navbar-menu */
+@media (max-width: 980px) {
+  .navbar-nav .open .dropdown-menu {
+
+  }
+
+  .navbar-nav .dropdown-menu .menu-item {
+    background: #fff;
+  }
+
+  .navbar-nav .open .dropdown-menu > li > a {
+    padding: 15px 15px 15px 30px;
+    font-size: 14px;
+    color: #05753c;
+  }
+
+  .navbar-nav .open .dropdown-menu > li > a:hover {
+    color: #05753c;
+  }
+  .navbar-default .navbar-nav > .menu-item-has-children {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-default .navbar-nav > .menu-item-has-children > a {
+    padding: 0 0 15px 15px;
+  }
 }

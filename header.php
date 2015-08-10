@@ -30,7 +30,7 @@
               <a class="navbar-brand" href="#">Ecoficiencia</a>
             </div>
 
-            <div id="navbar" class="navbar-collapse collapse pull-right">
+            <div id="navbar" class="navbar-collapse collapse">
 
               <?php
                 $args = array(
