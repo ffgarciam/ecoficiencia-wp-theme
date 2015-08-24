@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Ecoficiencia</a>
+              <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
             </div>
 
             <div id="navbar" class="navbar-collapse collapse">
@@ -51,5 +51,5 @@
 
     <!-- main image -->
     <div class="covers-container">
-      <img src="<?php bloginfo('template_url'); ?>/images/home_bg.png" class="img-responsive" alt="home main image" />
+      <img src="<?php bloginfo('template_url'); ?>/images/home_bg.png" class="img-responsive header-bg-img" alt="home main image" />
     </div>
