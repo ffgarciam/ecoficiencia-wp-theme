@@ -120,7 +120,7 @@
     </div>
   </section>
 
-  <section class="corporate-social-section">
+  <section class="content-section">
     <h1>Corporate social Responsibility</h1>
     <div class="row">
       <div class="col-sm-4">

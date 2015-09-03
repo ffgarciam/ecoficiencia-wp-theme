@@ -138,17 +138,37 @@ Use it to make something cool, have fun, and share what you've learned with othe
   text-decoration: none;
 }
 
+.eco-service .fa-check-circle-o {
+  font-size: 26px;
+  font-weight: lighter;
+  color: #93c989;
+}
+
+.page-service .eco-service_body {
+  padding-left: 0;
+}
+
+.page-service .media-body > p {
+  color: #2d2d2d;
+  font-size: 18px;
+}
+
 /* corporate social section */
-.corporate-social-section {
+.content-section {
   margin: 50px 0;
 }
 
-.corporate-social-section > h1 {
+.content-section > h1 {
   font-size: 28px;
   color: #93c989;
   text-transform: uppercase;
   margin: 35px 0;
   text-align: center;
+}
+
+/* page service */
+.m-bottom {
+  margin-bottom: 15px;
 }
 
 
