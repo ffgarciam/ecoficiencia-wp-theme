@@ -48,8 +48,3 @@
         </nav>
       </header>
     </div>
-
-    <!-- main image -->
-    <div class="covers-container">
-      <img src="<?php bloginfo('template_url'); ?>/images/home_bg.png" class="img-responsive header-bg-img" alt="home main image" />
-    </div>

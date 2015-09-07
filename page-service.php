@@ -22,6 +22,12 @@ $query = new WP_Query($args);
 
 <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
   <!-- latest updates -->
+
+  <!-- main image -->
+  <div class="covers-container">
+    <img src="<?php the_field('image'); ?>" class="img-responsive header-bg-img" alt="<?php the_field('title'); ?>" />
+  </div>
+
   <section class="covers-container lastest-updates">
     <div class="container top-out-bg">
     </div>
@@ -208,7 +214,7 @@ $query = new WP_Query($args);
 <?php endwhile; else : ?>
 
   <div class="container ">
-    <p><?php _e( 'Lo siento, contenido no encontrada' ); ?></p>
+    <p><?php _e( 'Lo siento, servicio no encontrado' ); ?></p>
   </div>
 
 <?php endif; wp_reset_postdata(); ?>
