@@ -25,7 +25,7 @@ $query = new WP_Query($args);
 
   <!-- main image -->
   <div class="covers-container">
-    <img src="<?php the_field('image'); ?>" class="img-responsive header-bg-img" alt="<?php the_field('title'); ?>" />
+    <img src="<?php the_field('image'); ?>" class="header-bg-img" alt="<?php the_field('title'); ?>" />
   </div>
 
   <section class="covers-container lastest-updates">

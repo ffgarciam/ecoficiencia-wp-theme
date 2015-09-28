@@ -17,158 +17,118 @@
 
  <?php get_header(); ?>
 
+ <?php
+ $args = array(
+   'post_type' => 'home',
+ );
+ $query = new WP_Query($args);
+ ?>
+
+ <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+ <!-- main image -->
+ <div class="covers-container">
+   <img src="<?php the_field('image'); ?>" class="header-bg-img" alt="<?php the_field('title'); ?>" />
+ </div>
+
 <!-- latest updates -->
 <section class="covers-container lastest-updates">
+  <div class="container top-out-bg"></div>
   <h1>
-    <span>Latest Updates</span>
+    <span><?php the_field('news_title'); ?></span>
   </h1>
 
   <div class="container">
     <p class="lastest-updates_text">
-      Ecoficiencia launches the latest hydro power project in Central America
+      <?php the_field('news_description'); ?>
     </p>
 
-    <button class="btn btn-eco btn-lg" type="button" name="more-news">More News</button>
+    <button class="btn btn-eco btn-lg" type="button" name="more-news"><?php the_field('news_button'); ?></button>
+
+    <?php
+    $bottomTitle = get_field('bottom_title');
+    $bottomContent = get_field('bottom_content');
+    ?>
   </div>
 </section>
+
+<?php endwhile; else : ?>
+
+  <div class="container ">
+    <p><?php _e( 'Lo siento, servicio no encontrado' ); ?></p>
+  </div>
+
+<?php endif; wp_reset_postdata(); ?>
 
 <!-- main content: services we offer -->
 <main class="container">
   <section class="services-we-offer">
-    <h1>Services we offer</h1>
+    <h1><?php _e('Services we offer'); ?></h1>
 
-    <div class="row">
+    <?php
+    $args = array(
+      'post_type' => 'service_page',
+    );
+    $query = new WP_Query($args);
+    $i = 0;
+    ?>
+
+    <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+      <?php
+      $serviceUrl = sanitize_title(get_field('page_title'));
+
+      if ($i == 0) { ?>
+        <div class="row">
+      <?php } ?>
+
       <div class="col-sm-4">
         <section class="eco-service">
           <div class="eco-service_header">
-            <h1>Hydro</h1>
+            <h1><?php the_field('page_title'); ?></h1>
           </div>
           <div class="eco-service_body">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud
+              <?php the_field('title_description'); ?>
             </p>
-            <a href="#">learn more &gt;</a>
+            <a href="/servicios/<?php echo $serviceUrl; ?>"><?php _e('learn more &gt;'); ?></a>
           </div>
         </section>
       </div>
-      <div class="col-sm-4">
-        <section class="eco-service">
-          <div class="eco-service_header">
-            <h1>Wind</h1>
-          </div>
-          <div class="eco-service_body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud
-            </p>
-            <a href="#">learn more &gt;</a>
-          </div>
-        </section>
-      </div>
-      <div class="col-sm-4">
-        <section class="eco-service">
-          <div class="eco-service_header">
-            <h1>Energy Effiency</h1>
-          </div>
-          <div class="eco-service_body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud
-            </p>
-            <a href="#">learn more &gt;</a>
-          </div>
-        </section>
-      </div>
+
+    <?php
+    if ($i == 2) { ?>
+    </div>
+    <?php
+    $i = 0;
+    } else {
+      $i++;
+    }?>
+
+  <?php endwhile; else : ?>
+
+    <div class="container ">
+      <p><?php _e( 'Lo siento, servicios no encontrados' ); ?></p>
     </div>
 
-    <div class="row">
-      <div class="col-sm-4">
-        <section class="eco-service">
-          <div class="eco-service_header">
-            <h1>Biomass</h1>
-          </div>
-          <div class="eco-service_body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud
-            </p>
-            <a href="#">learn more &gt;</a>
-          </div>
-        </section>
-      </div>
-      <div class="col-sm-8">
-        <section class="eco-service">
-          <div class="eco-service_header">
-            <h1>Project supervision & due dilligence</h1>
-          </div>
-          <div class="eco-service_body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation. Lorem
-              ipsum dolor sit amet dolor ipsum lorem.
-            </p>
-            <a href="#">learn more &gt;</a>
-          </div>
-        </section>
-      </div>
-    </div>
+  <?php endif; wp_reset_postdata(); ?>
+
+  <?php
+  if ($i != 2) { ?>
+  </div>
+  <?php
+  }?>
+
   </section>
 
-  <section class="content-section">
-    <h1>Corporate social Responsibility</h1>
-    <div class="row">
-      <div class="col-sm-4">
-        <section class="eco-service">
-          <div class="eco-service_header">
-            <h1>Beneffiting Communities</h1>
-          </div>
-          <div class="eco-service_body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud
-            </p>
+  <section class="services-we-offer">
+    <h1><?php echo $bottomTitle; ?></h1>
 
-          </div>
-        </section>
-      </div>
-
-      <div class="col-sm-4">
-        <section class="eco-service">
-          <div class="eco-service_header">
-            <h1>Our Involvement</h1>
-          </div>
-          <div class="eco-service_body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud
-            </p>
-
-          </div>
-        </section>
-      </div>
-
-      <div class="col-sm-4">
-        <section class="eco-service">
-          <div class="eco-service_header">
-            <h1>Lorem Ipsum</h1>
-          </div>
-          <div class="eco-service_body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud
-            </p>
-
-          </div>
-        </section>
+    <div class="eco-service">
+      <div class="eco-service_body">
+        <p>
+          <?php echo $bottomContent; ?>
+        </p>
+        <a href="/servicios/#"><?php _e('mas Información &gt;'); ?></a>
       </div>
     </div>
   </section>

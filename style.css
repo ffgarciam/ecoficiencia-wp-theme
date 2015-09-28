@@ -51,7 +51,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   font-size: 36px;
   color: #2b2d2d;
   font-family: "Myriad Pro", Helvetica, sans-serif;
-  width: 60%;
+  width: 80%;
   line-height: 1;
 }
 
@@ -76,6 +76,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-bottom: 10px;
 }
 
+
+.top-out-bg {
+  background-color: #fdfdfd;
+  position: relative;
+  z-index: 999;
+  margin-top: -20px;
+  padding: 0;
+  height: 20px;
+}
+
+
+.header-bg-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
 /* eco service section */
 .eco-service {
   border: 1px solid #ededed;
@@ -86,6 +104,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   background-image: linear-gradient(to bottom, #fbfbfb 0%, #f6f6f6 100%); /* Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+ */
   background-repeat: repeat-x;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(#fbfbfb),argb(#f6f6f6))); /* IE9 and down */
+
+  margin-bottom: 20px;
 }
 
 .eco-service_header {
@@ -113,11 +133,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 0 15px;
   min-height: 215px;
   position: relative;
+  padding-bottom: 30px;
 }
 
 .eco-service_body > p {
   color: #2d2d2d;
   font-size: 18px;
+  margin: 0;
 }
 
 .eco-service_body > a {
@@ -267,15 +289,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 }
 
-.about-us .top-out-bg {
-  background-color: #fdfdfd;
-  position: relative;
-  z-index: 999;
-  margin-top: -20px;
-  padding: 0;
-  height: 20px;
-}
-
 .about-us_content {
   margin: 30px 0;
   color: #2d2d2d;
@@ -288,4 +301,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .about-us .lastest-updates_text {
   font-size: 24px;
+}
+
+
+.form-group label {
+  text-align: left;
 }
