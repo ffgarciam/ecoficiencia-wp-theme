@@ -29,7 +29,7 @@ $query = new WP_Query($args);
         ?>
       </p>
     </div>
-</section>
+  </section>
 
 <section class="container">
   <div class="about-us_content">

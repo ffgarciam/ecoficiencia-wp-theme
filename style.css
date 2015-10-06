@@ -85,7 +85,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 0;
   height: 20px;
 }
-
+.about-us .top-out-bg {
+  margin-top: 0;
+}
 
 .header-bg-img {
   display: block;

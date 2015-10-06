@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
-<section class="row">
-  <div class="small-12 columns">
-    <div class="leader">
+<main class="container">
+  <section class="services-we-offer">
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -14,8 +13,8 @@
 
   	<?php endif; ?>
 
-    </div>
-  </div>
-</section>
+  </section>
+</main>
+
 
 <?php get_footer(); ?>

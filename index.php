@@ -43,7 +43,7 @@
       <?php the_field('news_description'); ?>
     </p>
 
-    <button class="btn btn-eco btn-lg" type="button" name="more-news"><?php the_field('news_button'); ?></button>
+    <a href="/noticias" class="btn btn-eco btn-lg" type="button" name="more-news"><?php the_field('news_button'); ?></a>
 
     <?php
     $bottomTitle = get_field('bottom_title');
@@ -128,7 +128,7 @@
         <p>
           <?php echo $bottomContent; ?>
         </p>
-        <a href="/servicios/#"><?php _e('mas Información &gt;'); ?></a>
+        <a href="/responsabilidad-social/"><?php _e('mas Información &gt;'); ?></a>
       </div>
     </div>
   </section>
