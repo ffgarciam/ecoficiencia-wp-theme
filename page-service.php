@@ -29,7 +29,7 @@ $query = new WP_Query($args);
   </div>
 
   <section class="covers-container lastest-updates">
-    <div class="container top-out-bg">
+    <!-- <div class="container top-out-bg"> -->
     </div>
     <h1>
       <span><?php the_field('title'); ?></span>
@@ -45,170 +45,182 @@ $query = new WP_Query($args);
 </section>
 
 <section class="container page-service">
-  <section class="content-section">
-    <h1><?php the_field('content_title') ?></h1>
-
-    <div class="row m-bottom">
-      <?php
-      $item = get_field('content_item');
-      if (!empty( $item )){
-      ?>
-      <div class="col-sm-4 ">
-        <section class="eco-service">
-          <div class="eco-service_body">
-            <div class="media">
-              <div class="media-left">
-                <i class="fa fa-check-circle-o"></i>
-              </div>
-              <div class="media-body">
-                <p>
-                  <?php echo $item ?>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <?php } ?>
-
-      <?php
-      $item = get_field('content_item2');
-      if (!empty( $item )){
-      ?>
-      <div class="col-sm-4 ">
-        <section class="eco-service">
-          <div class="eco-service_body">
-            <div class="media">
-              <div class="media-left">
-                <i class="fa fa-check-circle-o"></i>
-              </div>
-              <div class="media-body">
-                <p>
-                  <?php echo $item ?>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <?php } ?>
-
-      <?php
-      $item = get_field('content_item3');
-      if (!empty( $item )){
-      ?>
-      <div class="col-sm-4 ">
-        <section class="eco-service">
-          <div class="eco-service_body">
-            <div class="media">
-              <div class="media-left">
-                <i class="fa fa-check-circle-o"></i>
-              </div>
-              <div class="media-body">
-                <p>
-                  <?php echo $item ?>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <?php } ?>
+  <div class="row">
+    <div class="col-md-4">
+      <section class="description-service" style="background-color: <?php the_field('color_de_la_descripcion') ?>">
+          <?php the_field('descripcion_del_servicio'); ?>
+      </section>
     </div>
+    <div class="col-md-8">
+      <section class="content-section">
+        <h1><?php the_field('content_title') ?></h1>
 
-    <div class="row m-bottom">
-      <?php
-      $item = get_field('content_item4');
-      if (!empty( $item )){
-      ?>
-      <div class="col-sm-4 ">
-        <section class="eco-service">
-          <div class="eco-service_body">
-            <div class="media">
-              <div class="media-left">
-                <i class="fa fa-check-circle-o"></i>
+        <div class="row m-bottom">
+          <?php
+          $item = get_field('content_item');
+          if (!empty( $item )){
+          ?>
+          <div class="col-md-6">
+            <section class="eco-service">
+              <div class="eco-service_body">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fa fa-check-circle-o"></i>
+                  </div>
+                  <div class="media-body">
+                    <p>
+                      <?php echo $item ?>
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="media-body">
-                <p>
-                  <?php echo $item ?>
-                </p>
-              </div>
-            </div>
+            </section>
           </div>
-        </section>
-      </div>
-      <?php } ?>
+          <?php } ?>
 
-      <?php
-      $item = get_field('content_item5');
-      if (!empty( $item )){
-      ?>
-      <div class="col-sm-4 ">
-        <section class="eco-service">
-          <div class="eco-service_body">
-            <div class="media">
-              <div class="media-left">
-                <i class="fa fa-check-circle-o"></i>
+          <?php
+          $item = get_field('content_item2');
+          if (!empty( $item )){
+          ?>
+          <div class="col-md-6">
+            <section class="eco-service">
+              <div class="eco-service_body">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fa fa-check-circle-o"></i>
+                  </div>
+                  <div class="media-body">
+                    <p>
+                      <?php echo $item ?>
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="media-body">
-                <p>
-                  <?php echo $item ?>
-                </p>
-              </div>
-            </div>
+            </section>
           </div>
-        </section>
-      </div>
-      <?php } ?>
+          <?php } ?>
+        </div>
 
-      <?php
-      $item = get_field('content_item6');
-      if (!empty( $item )){
-      ?>
-      <div class="col-sm-4 ">
-        <section class="eco-service">
-          <div class="eco-service_body">
-            <div class="media">
-              <div class="media-left">
-                <i class="fa fa-check-circle-o"></i>
+        <div class="row m-bottom">
+          <?php
+          $item = get_field('content_item3');
+          if (!empty( $item )){
+          ?>
+          <div class="col-md-6">
+            <section class="eco-service">
+              <div class="eco-service_body">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fa fa-check-circle-o"></i>
+                  </div>
+                  <div class="media-body">
+                    <p>
+                      <?php echo $item ?>
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="media-body">
-                <p>
-                  <?php echo $item ?>
-                </p>
-              </div>
-            </div>
+            </section>
           </div>
-        </section>
-      </div>
-      <?php } ?>
+          <?php } ?>
+
+          <?php
+          $item = get_field('content_item4');
+          if (!empty( $item )){
+          ?>
+          <div class="col-md-6">
+            <section class="eco-service">
+              <div class="eco-service_body">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fa fa-check-circle-o"></i>
+                  </div>
+                  <div class="media-body">
+                    <p>
+                      <?php echo $item ?>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <?php } ?>
+        </div>
+
+        <div class="row m-bottom">
+          <?php
+          $item = get_field('content_item5');
+          if (!empty( $item )){
+          ?>
+          <div class="col-md-6">
+            <section class="eco-service">
+              <div class="eco-service_body">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fa fa-check-circle-o"></i>
+                  </div>
+                  <div class="media-body">
+                    <p>
+                      <?php echo $item ?>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <?php } ?>
+
+          <?php
+          $item = get_field('content_item6');
+          if (!empty( $item )){
+          ?>
+          <div class="col-md-6">
+            <section class="eco-service">
+              <div class="eco-service_body">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fa fa-check-circle-o"></i>
+                  </div>
+                  <div class="media-body">
+                    <p>
+                      <?php echo $item ?>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <?php } ?>
+        </div>
+
+        <div class="row">
+          <?php
+          $item = get_field('content_item7');
+          if (!empty( $item )){
+          ?>
+          <div class="col-sm-12">
+            <section class="eco-service">
+              <div class="eco-service_body">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fa fa-check-circle-o"></i>
+                  </div>
+                  <div class="media-body">
+                    <p>
+                      <?php echo $item ?>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <?php } ?>
+        </div>
+
+      </section>
     </div>
+  </div>
 
-    <div class="row">
-      <?php
-      $item = get_field('content_item7');
-      if (!empty( $item )){
-      ?>
-      <div class="col-sm-12">
-        <section class="eco-service">
-          <div class="eco-service_body">
-            <div class="media">
-              <div class="media-left">
-                <i class="fa fa-check-circle-o"></i>
-              </div>
-              <div class="media-body">
-                <p>
-                  <?php echo $item ?>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <?php } ?>
-    </div>
-
-  </section>
 </section>
 
 <?php endwhile; else : ?>

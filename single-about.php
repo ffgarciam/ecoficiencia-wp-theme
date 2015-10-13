@@ -5,7 +5,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <!-- latest updates -->
   <section class="covers-container lastest-updates about-us">
-    <div class="container top-out-bg">
+    <!-- <div class="container top-out-bg"> -->
     </div>
     <h1>
       <span>single about <?php the_title(); ?></span>

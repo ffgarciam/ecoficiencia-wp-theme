@@ -16,7 +16,7 @@
   <body <?php body_class(); ?>>
 
     <!-- header -->
-    <div class="container">
+    <div class="covers-container">
       <header>
         <nav class="navbar navbar-default">
           <div class="container-fluid">

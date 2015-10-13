@@ -87,6 +87,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .about-us .top-out-bg {
   margin-top: 0;
+  z-index: -1;
 }
 
 .header-bg-img {
@@ -133,9 +134,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .eco-service_body {
   padding: 0 15px;
-  min-height: 215px;
+  min-height: 220px;
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .eco-service_body > p {
@@ -174,7 +175,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .page-service .media-body > p {
   color: #2d2d2d;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 /* corporate social section */
@@ -255,6 +256,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
   color: #787878;
 }
 
+.footer .fa-facebook-official {
+  color: #3a5795;
+}
+
+.footer .fa-twitter {
+  color: #55acee;
+}
+
+.footer .fa-google-plus-square {
+  color: #d73d32;
+}
+.footer i {
+    font-size: 24px;
+}
 
 /* navbar-menu */
 @media (max-width: 980px) {
@@ -308,4 +323,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .form-group label {
   text-align: left;
+}
+
+/* navbar nav */
+.navbar-nav .dropdown-menu > li,
+.navbar-default .navbar-nav>li {
+  z-index: 5;
+}
+
+.description-service {
+  padding: 20px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 35px;
 }

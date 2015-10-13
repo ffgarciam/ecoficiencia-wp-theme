@@ -13,10 +13,10 @@
             <a href="#">Ecoleños</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="/contactenos">Contáctenos</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="/acerca-de">Acerca de</a>
           </li>
         </ul>
       </div>
@@ -24,7 +24,7 @@
         <ul>
           <li>
             <a href="#">
-              <i class="fa fa-facebook"></i>
+              <i class="fa fa-facebook-official"></i>
             </a>
           </li>
           <li>
@@ -34,16 +34,16 @@
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-google-plus"></i>
+              <i class="fa fa-google-plus-square"></i>
             </a>
           </li>
         </ul>
       </div>
       <div class="col-sm-3">
         <dl class="address">
-          <dt>Tegucigalpa, Honduras</dt>
-          <dd>Ave. 5, Calle 123</dd>
-          <dd>(504) 1234-1134</dd>
+          <dt>Colonia Florencia Norte, 4ta. Calle, Casa No. 4068. Tegucigalpa, Honduras</dt>
+          <dd>(504) 2239 2015</dd>
+          <dd>(504) 9458 2638</dd>
         </dl>
       </div>
     </div>
