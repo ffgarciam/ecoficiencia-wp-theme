@@ -85,6 +85,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 0;
   height: 20px;
 }
+
+.about-us {
+  margin-top: 50px;
+}
 .about-us .top-out-bg {
   margin-top: 0;
   z-index: -1;
