@@ -26,6 +26,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(#fdfdfd),argb(#f8f8f8))); /* IE9 and down */
 }
 
+.green-font {
+  color: #93c989;
+}
+
 .lastest-updates > h1 {
   font-family: "Myriad Pro", Helvetica, sans-serif;
   margin: 0;
@@ -89,6 +93,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .about-us {
   margin-top: 50px;
 }
+
+.about-us .container {
+  text-align: justify;
+}
+
 .about-us .top-out-bg {
   margin-top: 0;
   z-index: -1;
@@ -137,15 +146,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .eco-service_body {
-  padding: 0 15px;
-  min-height: 220px;
+  padding: 0 15px 25px;
   position: relative;
-  padding-bottom: 20px;
 }
 
 .eco-service_body > p {
   color: #2d2d2d;
   font-size: 18px;
+  margin: 0;
+}
+
+.eco-service_body .media-body > p {
   margin: 0;
 }
 
@@ -340,4 +351,40 @@ Use it to make something cool, have fun, and share what you've learned with othe
   color: #fff;
   font-size: 16px;
   margin-top: 35px;
+}
+
+.pag-proyectos br {
+  display: none;
+}
+
+.pag-proyectos a {
+  color: #333;
+}
+
+.pag-proyectos h1 {
+  font-size: 28px;
+  color: #2b2d2d;
+  margin: 0 0 20px;
+}
+
+.pag-proyectos .nav > li > a {
+  padding: 10px 15px;
+}
+
+.pag-proyectos .nav-pills > li.active > a {
+  background-color: #93c989;
+}
+
+.pag-proyectos .listas li {
+  margin-bottom: 10px;
+}
+
+.pag-proyectos .tab-content {
+  text-align: justify;
+}
+
+@media screen and (max-width: 992px) {
+  .pag-proyectos .nav {
+    margin-bottom: 20px;
+  }
 }

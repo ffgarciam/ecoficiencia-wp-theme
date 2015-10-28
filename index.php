@@ -190,18 +190,20 @@
 
   </section>
 
+<!--
   <section class="services-we-offer">
-    <h1><?php echo $bottomTitle; ?></h1>
+    <h1><?php // echo $bottomTitle; ?></h1>
 
     <div class="eco-service">
       <div class="eco-service_body">
         <p>
-          <?php echo $bottomContent; ?>
+          <?php // echo $bottomContent; ?>
         </p>
-        <a href="/responsabilidad-social/"><?php _e('mas Información &gt;'); ?></a>
+        <a href="/responsabilidad-social/"><?php // _e('mas Información &gt;'); ?></a>
       </div>
     </div>
   </section>
+-->
 
 </main> <!-- /main content -->
 

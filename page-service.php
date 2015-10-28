@@ -231,4 +231,22 @@ $query = new WP_Query($args);
 
 <?php endif; wp_reset_postdata(); ?>
 
+<script type="text/javascript">
+  (function ($) {
+    var servicios = $('.eco-service'),
+      masAlto = 0;
+
+    for ( var i = 0; i < servicios.length; i++ ) {
+      if ( $(servicios[i]).height() > masAlto ) {
+        masAlto = $(servicios[i]).height();
+      }
+    }
+
+    for ( var i = 0; i < servicios.length; i++ ) {
+      $(servicios[i]).height( masAlto );
+    }
+
+  })(jQuery);
+</script>
+
 <?php get_footer(); ?>
