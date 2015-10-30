@@ -23,20 +23,22 @@
       <div class="col-sm-2">
         <ul>
           <li>
-            <a href="#">
+            <a href="http://www.facebook.com/ecoficiencia" target="_blank">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="http://www.twitter.com/ecoficiencia" target="_blank">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
+          <!--
           <li>
             <a href="#">
               <i class="fa fa-google-plus-square"></i>
             </a>
           </li>
+          -->
         </ul>
       </div>
       <div class="col-sm-3">
